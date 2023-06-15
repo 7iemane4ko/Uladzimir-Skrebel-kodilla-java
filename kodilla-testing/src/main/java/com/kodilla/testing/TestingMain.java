@@ -6,39 +6,41 @@ import user.SimpleUser;
 public class TestingMain {
     public static void main(String[] args) {
 
-        // test pierwszy->
+        // Test pierwszy->
         System.out.println("Test - pierwszy SimpleUser test jednostkowy:");
         //
 
-        SimpleUser simpleUser = new SimpleUser("theForumUser");
+            SimpleUser simpleUser = new SimpleUser("theForumUser");
 
-        String result = simpleUser.getUsername();
+            String result = simpleUser.getUsername();
 
-        if (result.equals("theForumUser")) {
+            if (result.equals("theForumUser")) {
+                System.out.println("test OK");
+            } else {
+                System.out.println("Error!");
+            }
+
+        // Kolejny Test ->
+        System.out.println("Test - drugi Calculator (pierwsza metoda addAToB) test jednostkowy:");
+        //
+
+            Calculator Calculator = new Calculator();
+
+            double resultOne = Calculator.addAToB(8.4, 8.4);
+            double resultTwo = Calculator.substractAFroB(8.4, 8.4);
+
+        if (resultOne == 16.8) {
             System.out.println("test OK");
         } else {
             System.out.println("Error!");
         }
 
-        // kolejny test ->
-        System.out.println("Test - drugi Calculator (pierwsza metoda addAToB) test jednostkowy:");
-        //
-
-        Calculator Calculator = new Calculator();
-
-        double resultOne = Calculator.addAToB(8.4, 8.4);
-
-        System.out.println(result);
-
-        // kolejny test ->
-        System.out.println("Test - drugi Calculator (druga metoda addAToB) test jednostkowy:");
-        //
-
-        Calculator simpleCalculator = new Calculator();
-
-        double resultTwo = simpleCalculator.substractAFroB(8.4, 8.4);
-
-        System.out.println(result);
+        if (resultTwo == 0) {
+            System.out.println("test OK");
+        } else {
+            System.out.println("Error!");
+        }
 
     }
+
 }
